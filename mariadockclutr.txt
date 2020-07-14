@@ -1,0 +1,24 @@
+Official:
+
+docker run -d -it --restart always  --name maria -v /opt/Mtest:/var/lib/mysql -v Mtest:/etc/mysql -e MYSQL_ROOT_PASSWORD=123456 -p 3306:3306 -p 4567:4567/udp -p 4567-4568:4567-4568 -p 4444:4444 mariadb:latest mysqld --wsrep-new-cluster
+
+
+docker run -d -it --restart always --name maria -v /opt/Mdb:/var/lib/mysql -v Mdb:/etc/mysql -e MYSQL_ROOT_PASSWORD=123456 -p 3310:3306 -p 4567:4567/udp -p 4567-4568:4567-4568 -p 4444:4444 mariadb:latest mysqld
+
+
+
+
+
+
+
+
+
+
+
+
+docker run -d -it --restart always  --name galera   -e WSREP_NODE_ADDRESS=192.168.20.186   -e WSREP_CLUSTER_ADDRESS=gcomm://192.168.20.186:4567,192.168.20.189:4567 -e SAFE_TO_BOOTSTRAP=1  -e MYSQL_ROOT_PASSWORD=123456   -p 3306:3306   -p 4567:4567/udp   -p 4567-4568:4567-4568   -p 4444:4444   -v /opt/mnt/data/galera.service/mysql:/var/lib/mysql:Z   panubo/mariadb-galera     mysqld     --wsrep-new-cluster
+
+
+docker run -d -it  --name galera  --restart always -e WSREP_NODE_ADDRESS=192.168.20.189   -e WSREP_CLUSTER_ADDRESS=gcomm://192.168.20.189:4567,192.168.20.186:4567   -e MYSQL_ROOT_PASSWORD=123456   -p 3310:3306   -p 4567:4567/udp   -p 4567-4568:4567-4568   -p 4444:4444   -v /opt/mnt/data/galera.service/mysql:/var/lib/mysql:Z   panubo/mariadb-galera     mysqld
+
+

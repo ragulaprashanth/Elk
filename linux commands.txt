@@ -1,0 +1,55 @@
+cat backup_29-11-2017.txt  foo.txt------------> it will display contents of test and test1 file in terminal.
+cat run.txt----------------------------------->We will create a file called test2 file.
+cat foo.txt | more---------------------------->it will shows data in terminal
+cat foo.txt | less --------------------------->it will shows data in less like in vi editor.
+cat -n foo.txt-------------------------------->assign line numbers in file
+cat -e doop.txt------------------------------->with -e option that ‘$‘ is shows at the end of line and also in space showing ‘$‘ if there is any gap between paragraphs.
+cat -T doop.txt------------------------------->we could see TAB space is filled up with ‘^I‘ character
+cat foo.txt doop.txt-------------------------->openinig multiple files at atime.
+sed -i '5d' foo.txt--------------------------->delete perticular line in file.
+cat file1 file2 file3 > FILE------------------>combine multiple files into single file.
+cat file1 file2 file3 | sort > FILE----------->This will create a file test4 and output of cat command is piped to sort and result will be redirected in a newly created file.
+
+
+touch -c dhan---------------------------------> it will not create file
+
+
+mkdir -m 777 foo------------------------------>give the permission to the folder
+mkdir -v done--------------------------------->it will create the directory and displyed status.
+chgrp dhan done------------------------------->assign done folder to the dhan group
+usermod -a -G dhan prash---------------------->add prash user into dhan group
+mkdir -p /gun/run/fun------------------------->we can create the sub-folders into folder
+
+
+ls -F------------------------------------------>will add the ‘/’ Character at the end each directory.
+ls -r------------------------------------------> display files and directories in reverse order.
+ls -R------------------------------------------>list very long listing directory trees.
+ls -ltr---------------------------------------->shows latest modification file or directory date as last.
+ls -lS----------------------------------------->displays file size in order.
+ls -i------------------------------------------>list file / directory with inode number.
+ls -l /tmp-------------------------------------> list files under directory /tmp.
+ls -n------------------------------------------>To display UID and GID of files and directories.
+ls -t------------------------------------------>displays recent files to older files created.
+ls -l --block-size=k  done--------------------->it will shows done file size.
+ls -s -h -------------------------------------->it will shows file name and size. 
+ls --format=single-column---------------------->displays files and directories in single column
+
+
+@ indicates a symbolic link 
+* indicates an executable 
+= indicates a socket file 
+| indicates a named pipe 
+> indicates a door 
+/ indicates a directory
+
+
+rm -i fun-------------------------------------->it will asking conformation before deleting file.
+
+netstat -ano|grep 3307|grep ESTABLISHED
+
+java -XX:+PrintFlagsFinal -version | grep -iE 'HeapSize|PermSize|ThreadStackSize'----->heap size
+
+
+
+
+

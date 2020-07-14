@@ -1,0 +1,22 @@
+zookeeper-ctr:
+       
+   45.114.245.208 -->  2182,2890,3890 (ports)
+   
+   volumes:
+      -->zookeeper-conf-ctr  
+      -->zookeeper-data-ctr  
+
+kafka-cluster:
+
+    1) 45.114.245.208  --> 9093 (port)
+        
+    volumes: 
+      -->kafka-conf-ctr
+      -->kafka-data-ctr
+
+    2) 45.114.245.233  --> 9093 (port)s
+   
+     volumes: 
+      -->kafka-conf-ctr
+      -->kafka-data-ctr
+

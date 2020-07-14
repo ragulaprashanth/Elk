@@ -1,0 +1,16 @@
+##45.114.245.233:
+
+nginxspeed_page
+tomcat8
+mariadb
+
+
+##45.114.245.226:
+
+cassandra
+
+
+##45.114.245.208:
+cassandra
+nginxpage_speed
+tomcat8
